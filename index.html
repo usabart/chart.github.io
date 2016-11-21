@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<link rel=stylesheet type="text/css" href="chart.css" />
+		<script src="chart.js"></script>
+	<body>
+	<div id="graph">
+		<img id="base" src="chartB.svg" />
+		<img src="chartMax.svg" id="cmax" class="lines" />
+		<img src="chartSel.svg" id="csel" class="lines" />
+		<img src="chartBal.svg" id="cbal" class="lines" />
+		<img src="chartTim.svg" id="ctim" class="lines" />
+		<img src="chartCen.svg" id="ccen" class="lines" />
+		<img src="chartMin.svg" id="cmin" class="lines" />
+		
+		<div class="label" id="lac" onclick="disp('lac')">Limiting Access Control</div>
+		<div class="label" id="rc" onclick="disp('rc')">Restricting Chat</div>
+		<div class="label" id="anf" onclick="disp('anf')">Altering News Feed</div>
+		<div class="label" id="flm" onclick="disp('flm')">Friend List Mgmt</div>
+		<div class="label" id="wbi" onclick="disp('wbi')">Withholding Basic Info.</div>
+		<div class="label" id="twm" onclick="disp('twm')">Timeline/Wall Moderation</div>
+		<div class="label" id="ss" onclick="disp('ss')">Selective Sharing</div>
+		<div class="label" id="wci" onclick="disp('wci')">Withholding Contact Info.</div>
+		<div class="label" id="rm" onclick="disp('rm')">Reputation Mgmt</div>
+		<div class="label" id="bp" onclick="disp('bp')">Block People</div>
+		<div class="label" id="bae" onclick="disp('bae')">Block Apps/Events</div>
+		
+	</div>
+	<div id="buttons">
+		<div class="button" id="max" onclick="toggle('max')">Privacy Maximizers</div>
+		<div class="button" id="sel" onclick="toggle('sel')">Selective Sharers</div>
+		<div class="button" id="bal" onclick="toggle('bal')">Privacy Balancers</div>
+		<div class="button" id="tim" onclick="toggle('tim')">Time Savers/Consumers</div>
+		<div class="button" id="cen" onclick="toggle('cen')">Self-Censors</div>
+		<div class="button" id="min" onclick="toggle('min')">Privacy Minimalists</div>
+	</div>
+	<div id="graph2">
+		<img id="base2" src="chart2B.svg" />
+		<img src="c_lac_max.svg" id="clacmax" class="bars" />
+		<img src="c_lac_sel.svg" id="clacsel" class="bars" />
+		<img src="c_lac_bal.svg" id="clacbal" class="bars" />
+		<img src="c_lac_tim.svg" id="clactim" class="bars" />
+		<img src="c_lac_cen.svg" id="claccen" class="bars" />
+		<img src="c_lac_min.svg" id="clacmin" class="bars" />
+		<img src="c_rc_max.svg" id="crcmax" class="bars" />
+		<img src="c_rc_sel.svg" id="crcsel" class="bars" />
+		<img src="c_rc_bal.svg" id="crcbal" class="bars" />
+		<img src="c_rc_tim.svg" id="crctim" class="bars" />
+		<img src="c_rc_cen.svg" id="crccen" class="bars" />
+		<img src="c_rc_min.svg" id="crcmin" class="bars" />
+		<img src="c_anf_max.svg" id="canfmax" class="bars" />
+		<img src="c_anf_sel.svg" id="canfsel" class="bars" />
+		<img src="c_anf_bal.svg" id="canfbal" class="bars" />
+		<img src="c_anf_tim.svg" id="canftim" class="bars" />
+		<img src="c_anf_cen.svg" id="canfcen" class="bars" />
+		<img src="c_anf_min.svg" id="canfmin" class="bars" />
+		<img src="c_flm_max.svg" id="cflmmax" class="bars" />
+		<img src="c_flm_sel.svg" id="cflmsel" class="bars" />
+		<img src="c_flm_bal.svg" id="cflmbal" class="bars" />
+		<img src="c_flm_tim.svg" id="cflmtim" class="bars" />
+		<img src="c_flm_cen.svg" id="cflmcen" class="bars" />
+		<img src="c_flm_min.svg" id="cflmmin" class="bars" />
+		<img src="c_wbi_max.svg" id="cwbimax" class="bars" />
+		<img src="c_wbi_sel.svg" id="cwbisel" class="bars" />
+		<img src="c_wbi_bal.svg" id="cwbibal" class="bars" />
+		<img src="c_wbi_tim.svg" id="cwbitim" class="bars" />
+		<img src="c_wbi_cen.svg" id="cwbicen" class="bars" />
+		<img src="c_wbi_min.svg" id="cwbimin" class="bars" />
+		<img src="c_twm_max.svg" id="ctwmmax" class="bars" />
+		<img src="c_twm_sel.svg" id="ctwmsel" class="bars" />
+		<img src="c_twm_bal.svg" id="ctwmbal" class="bars" />
+		<img src="c_twm_tim.svg" id="ctwmtim" class="bars" />
+		<img src="c_twm_cen.svg" id="ctwmcen" class="bars" />
+		<img src="c_twm_min.svg" id="ctwmmin" class="bars" />
+		<img src="c_ss_max.svg" id="cssmax" class="bars" />
+		<img src="c_ss_sel.svg" id="csssel" class="bars" />
+		<img src="c_ss_bal.svg" id="cssbal" class="bars" />
+		<!--<img src="c_ss_tim.svg" id="csstim" class="bars" />-->
+		<img src="c_ss_cen.svg" id="csscen" class="bars" />
+		<img src="c_ss_min.svg" id="cssmin" class="bars" />
+		<img src="c_wci_max.svg" id="cwcimax" class="bars" />
+		<img src="c_wci_sel.svg" id="cwcisel" class="bars" />
+		<img src="c_wci_bal.svg" id="cwcibal" class="bars" />
+		<img src="c_wci_tim.svg" id="cwcitim" class="bars" />
+		<img src="c_wci_cen.svg" id="cwcicen" class="bars" />
+		<img src="c_wci_min.svg" id="cwcimin" class="bars" />
+		<img src="c_rm_max.svg" id="crmmax" class="bars" />
+		<img src="c_rm_sel.svg" id="crmsel" class="bars" />
+		<img src="c_rm_bal.svg" id="crmbal" class="bars" />
+		<img src="c_rm_tim.svg" id="crmtim" class="bars" />
+		<img src="c_rm_cen.svg" id="crmcen" class="bars" />
+		<img src="c_rm_min.svg" id="crmmin" class="bars" />
+		<img src="c_bp_max.svg" id="cbpmax" class="bars" />
+		<img src="c_bp_sel.svg" id="cbpsel" class="bars" />
+		<img src="c_bp_bal.svg" id="cbpbal" class="bars" />
+		<img src="c_bp_tim.svg" id="cbptim" class="bars" />
+		<img src="c_bp_cen.svg" id="cbpcen" class="bars" />
+		<img src="c_bp_min.svg" id="cbpmin" class="bars" />
+		<img src="c_bae_max.svg" id="cbaemax" class="bars" />
+		<img src="c_bae_sel.svg" id="cbaesel" class="bars" />
+		<img src="c_bae_bal.svg" id="cbaebal" class="bars" />
+		<img src="c_bae_tim.svg" id="cbaetim" class="bars" />
+		<img src="c_bae_cen.svg" id="cbaecen" class="bars" />
+		<img src="c_bae_min.svg" id="cbaemin" class="bars" />
+		<div class="title" id="tlac">Limiting Access Control</div>
+		<div class="title" id="trc">Restricting Chat</div>
+		<div class="title" id="tanf">Altering News Feed</div>
+		<div class="title" id="tflm">Friend List Mgmt</div>
+		<div class="title" id="twbi">Withholding Basic Info.</div>
+		<div class="title" id="ttwm">Timeline/Wall Moderation</div>
+		<div class="title" id="tss">Selective Sharing</div>
+		<div class="title" id="twci">Withholding Contact Info.</div>
+		<div class="title" id="trm">Reputation Mgmt</div>
+		<div class="title" id="tbp">Block People</div>
+		<div class="title" id="tbae">Block Apps/Events</div>
+	</div>
+	</body>
+</html>

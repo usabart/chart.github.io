@@ -1,0 +1,135 @@
+#graph{
+	position: relative;
+	width: 450px;
+	float: left;
+}
+
+#graph2{
+	position: relative;
+	clear: left;
+	margin-top: 30px;
+	margin-left: 70px;
+}
+
+.title{
+	font-family: Helvetica;
+	visibility: hidden;
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	font-size: 13px;
+	color: #666;
+	width: 280px;
+	bottom: -15px;
+	left: 0px;
+}
+
+.lines{
+	position: absolute;
+	visibility: hidden;
+	top: 7px;
+	left: 0px;
+}
+
+.bars{
+	position: absolute;
+	visibility: hidden;
+	top: 0px;
+	left: 0px;
+}
+
+#base{
+	position: relative;
+	visibility: visible;
+	top: 0px;
+	left: 9px;
+}
+
+#base2{
+	visibility: hidden;
+	top: 330px;
+	left: 70px;
+}
+
+#buttons{
+	margin-left: 20px;
+	margin-top: 70px;
+	float: left;
+}
+
+.button{
+	font-family: Helvetica;
+	font-size: 13px;
+	border: 1px solid black;
+	margin-top: 5px;
+	padding: 6px 6px 6px 6px;
+	width: 165px;
+	cursor: hand;
+}
+
+.button:hover{
+	border: 3px solid black;
+	padding: 4px 4px 4px 4px;
+}
+
+.label{
+	color: #666;
+	position: absolute;
+	font-family: Helvetica;
+	font-size: 11px;
+	border: 1px solid #666;
+	padding: 3px 3px 3px 3px;
+	cursor: hand;
+	display: inline-block;
+}
+
+.label:hover{
+	border: 2px solid #666;
+	padding: 2px 2px 2px 2px;
+}
+
+#lac{top: 38px;  left: 170px}
+#rc{ top: 68px;  left: 298px}
+#anf{top: 115px; left: 335px}
+#flm{top: 180px; left: 342px}
+#wbi{top: 240px; left: 320px}
+#twm{top: 285px; left: 250px}
+#ss{ top: 285px; left: 110px}
+#wci{top: 240px; left: 5px}
+#rm{ top: 180px; left: 20px}
+#bp{ top: 115px; left: 48px}
+#bae{top: 68px;  left: 58px}
+
+.button.sel{
+	font-weight: bold;
+}
+
+.label.sel{
+	border-color: black;
+	color: black;
+	background-color: #DDD;
+}
+
+.sel#max{
+	background-color: #B9CCE3;
+}
+
+.sel#sel{
+	background-color: #E5B8B8;
+}
+
+.sel#bal{
+	background-color: #D8E3BE;
+}
+
+.sel#tim{
+	background-color: #CCC1D9;
+}
+
+.sel#cen{
+	background-color: #B8DEE7;
+}
+
+.sel#min{
+	background-color: #FBD5B6;
+}
